@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
+
 <body>
-    My Calc
+    <div class="container">
+        <div class="display-3 text-center">Calculator</div>
+
+        <div class="row mb-2">
+
+            <div class="col-sm-11">
+
+                <input class="form-control form-control-lg" type="text" placeholder=". . ."
+                    aria-label=".form-control-lg example">
+
+            </div>
+
+            <div class="col-sm-1 col-12 text-center">
+
+                <button type="button" class="btn btn-outline-primary">=</button>
+
+            </div>
+        </div><!-- row -->
+        <div class="oprators mb-3">
+            <div class="row">
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-primary">+</button>
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-secondary">-</button>
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-success">X</button>
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-danger">/</button>
+                </div>
+
+            </div><!-- row -->
+
+        </div><!-- End of oprators -->
+
+        <div class="numbers">
+
+            <div class="row mb-1">
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-dark">7</button>
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-dark">8</button>
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-dark">9</button>
+                </div>
+
+            </div><!-- row mb-1 -->
+
+            <div class="row mb-1">
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-dark">4</button>
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-dark">5</button>
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-dark">6</button>
+                </div>
+
+            </div><!-- row -->
+
+
+            <div class="row">
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-dark">1</button>
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-dark">2</button>
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-outline-dark">3</button>
+                </div>
+
+            </div><!-- row -->
+
+        </div><!-- End of numbers -->
+    </div> <!-- End of Container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
+    </script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
