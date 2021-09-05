@@ -17,18 +17,20 @@
 
         <div class="row mb-2">
 
-            <div class="col-sm-11">
+            <div class="col-sm-10 col-12">
 
-                <input class="form-control form-control-lg" type="text" placeholder=". . ."
+                <input name="input" id="input" class="form-control form-control-lg" type="text" placeholder=". . ."
                     aria-label=".form-control-lg example">
 
             </div>
 
-            <div class="col-sm-1 col-12 text-center">
 
-                <button type="button" class="col btn btn-outline-primary btn-lg">=</button>
 
-            </div>
+                <button value="=" onclick="myValue(value)" type="button" class="col-sm-1 col-6 btn btn-primary btn-lg">=</button>
+
+                <button value="c" onclick="myValue(value)" type="button" class="col-sm-1 col-6 btn btn-danger btn-lg">C</button>
+
+ 
         </div><!-- row -->
         <div class="oprators mb-3 ">
 
@@ -37,19 +39,19 @@
                 <div class="btn-group">
 
                     <div class="col-sm-1 col-3">
-                        <button type="button" class="col-12 btn btn-outline-primary btn-lg">+</button>
+                        <button value="+" onclick="myValue(value)" type="button" class="col-12 btn btn-outline-primary btn-lg">+</button>
                     </div>
 
                     <div class="col-sm-1 col-3">
-                        <button type="button" class="col-12 btn btn-outline-secondary btn-lg">-</button>
+                        <button value="-" onclick="myValue(value)" type="button" class="col-12 btn btn-outline-secondary btn-lg">-</button>
                     </div>
 
                     <div class="col-sm-1 col-3">
-                        <button type="button" class="col-12 btn btn-outline-success btn-lg">X</button>
+                        <button value="X" onclick="myValue(value)" type="button" class="col-12 btn btn-outline-success btn-lg">X</button>
                     </div>
 
                     <div class="col-sm-1 col-3">
-                        <button type="button" class="col-12 btn btn-outline-danger btn-lg">/</button>
+                        <button value="/" onclick="myValue(value)" type="button" class="col-12 btn btn-outline-danger btn-lg">/</button>
                     </div>
                 </div>
 
@@ -62,15 +64,15 @@
             <div class="row mb-1">
                 <div class="btn-group">
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-outline-dark btn-lg">7</button>
+                        <button value="7" onclick="myValue(value)" type="button" class="btn btn-outline-dark btn-lg">7</button>
                     </div>
 
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-outline-dark btn-lg">8</button>
+                        <button value="8" onclick="myValue(value)" type="button" class="btn btn-outline-dark btn-lg">8</button>
                     </div>
 
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-outline-dark btn-lg">9</button>
+                        <button value="9" onclick="myValue(value)" type="button" class="btn btn-outline-dark btn-lg">9</button>
                     </div>
                 </div>
 
@@ -80,13 +82,13 @@
 
                 <div class="btn-group">
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-outline-dark btn-lg">4</button>
+                        <button value="4" onclick="myValue(value)" type="button" class="btn btn-outline-dark btn-lg">4</button>
                     </div>
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-outline-dark btn-lg">5</button>
+                        <button value="5" onclick="myValue(value)" type="button" class="btn btn-outline-dark btn-lg">5</button>
                     </div>
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-outline-dark btn-lg">6</button>
+                        <button value="6" onclick="myValue(value)" type="button" class="btn btn-outline-dark btn-lg">6</button>
                     </div>
                 </div>
 
@@ -97,13 +99,13 @@
 
                 <div class="btn-group">
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-outline-dark btn-lg">1</button>
+                        <button value="1" onclick="myValue(value)" type="button" class="btn btn-outline-dark btn-lg">1</button>
                     </div>
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-outline-dark btn-lg">2</button>
+                        <button value="2" onclick="myValue(value)" type="button" class="btn btn-outline-dark btn-lg">2</button>
                     </div>
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-outline-dark btn-lg">3</button>
+                        <button value="3" onclick="myValue(value)" type="button" class="btn btn-outline-dark btn-lg">3</button>
                     </div>
                 </div>
 
