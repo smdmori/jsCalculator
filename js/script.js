@@ -1,24 +1,33 @@
 let input = document.querySelector('#input')
-let operators = document.querySelectorAll('.oprators button')
+const operators = ['+', '-', '*', '/', '=']
 let operatorClicked = false
-let operand
-let inputFirst
-let inputSecond
+let clr = false
+let operator
+let operandFirst = ''
+let operandSecond = ''
 
-operators.forEach( function(op) {
-    op.addEventListener('click', function() {
-        console.log('op |  clicked operator >>', op);
-        operatorClicked = true
-    })
-})
+// operators.forEach( function(op) {
+//     op.addEventListener('click', function() {
+//         console.log('op |  clicked operator >>', op);
+//         operatorClicked = true
+//     })
+// })
 // let btns = document.querySelectorAll('button')
 // let myValues = document.querySelectorAll('button').values
 
 // console.log(myValues);
 
 function myValue(e) {
+
+    if (clr) {
+        clearOutput()
+    }
     
-    if ( !operatorClicked ) {
+    if ( operators.includes(e)) {
+        operatorClicked = true
+    }
+
+    if ( !operatorClicked && e != 'c'){
         copyToFirstOperand(e)
     }
     else {
@@ -30,11 +39,18 @@ function myValue(e) {
 }
 
 function copyToFirstOperand(f) {
-    console.log('copyToFirstOperand >> ', f);
+
+    operandFirst += f
+
+    console.log('copyToFirstOperand >> ', operandFirst);
 }
 
 function copyToSecondOperand(s) {
-    console.log('copyToSecondOperand >> ', s);
+
+    if ( !operators.includes(s) && s != 'c') {
+        operandSecond += s
+    }
+    console.log('copyToSecondOperand >> ', operandSecond);
 }
 
 function copyToOutput(x) {
@@ -44,46 +60,66 @@ function copyToOutput(x) {
             break;
 
         case '+':
-            operand = '+'
+            operator = '+'
             input.value += x
             break
 
         case '-':
-            operand = '-'
+            operator = '-'
             input.value += x
             break
 
-        case 'X':
-            operand = '*'
+        case '*':
+            operator = '*'
             input.value += x
             break
 
         case '/':
-            operand = '/'
+            operator = '/'
             input.value += x
             break
 
         case '=':
             calculate(input.value)
+            clr = true
             break
         default:
             input.value += x
     }
 
     console.log('copyToOutput | value in output : x >> ', input.value)
-    // calculate(input.value)
-
-    // if (x == 'c' ) {
-    //     input.value = ''
-    // } else if ( x!= '=') {
-    //     input.value += x
-    // } else {
-    //     console.log('copyToInput | input.value >> ', input.value);
-    //     calculate(input.value)
-    // }
 }
 
 function calculate(params) {
+    let output
+    console.log('calculate | first >> ', operandFirst);
+    console.log('calculate | second >> ', operandSecond);
+    console.log('calculate | operator >> ', operator);
     console.log('calculate | params >> ', params);
-    
+    switch (operator) {
+        case '+':
+            output = Number(operandFirst) + Number(operandSecond)
+            break;
+        case '-':
+            output = Number(operandFirst) - Number(operandSecond)  
+            break;
+        case '*':
+            output = Number(operandFirst) * Number(operandSecond)  
+            break;
+        case '/':
+            output = Number(operandFirst) / Number(operandSecond)  
+            break;
+        default:
+            break;
+    }
+    console.log('calculate | output >> ', output);
+    input.value = output
+}
+
+function clearOutput() {
+    clr = false
+    operandFirst = ''
+    operandSecond = ''
+    input.value = ''
+    operatorClicked = false
 }
