@@ -1,0 +1,54 @@
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 100vh;
+}
+
+.heading {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.calc-form {
+  // font-size: 2rem;
+}
+
+.calc-btn {
+  font-size: 3rem;
+  font-weight: 100;
+  padding: 3rem;
+  // margin: 0.5rem;
+}
+
+.calc-input {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.btn-group {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-50 {
+  width: 100%;
+}
+
+.submit-btn {
+  padding: 1rem;
+}
+
+.submit-btn:first-of-type {
+  margin-right: 0.5rem;
+}
